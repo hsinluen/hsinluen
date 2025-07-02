@@ -1,0 +1,181 @@
+/* 基礎重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Microsoft JhengHei', Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* 測驗容器 */
+#quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+}
+
+/* 題目樣式 */
+.question {
+  background: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.question:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* 選項樣式 */
+label {
+  display: block;
+  padding: 10px 15px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #ddd;
+}
+
+label:hover {
+  background: #e8f4fc;
+  border-color: #3498db;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* 按鈕樣式 */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+#restart-btn {
+  background: #27ae60;
+  margin-top: 30px;
+}
+
+#restart-btn:hover {
+  background: #219653;
+}
+
+/* 結果區域 */
+#results {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+#results h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* 答案詳情 */
+.answer {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.correct {
+  background: #e8f8f0;
+  border-left: 4px solid #27ae60;
+}
+
+.incorrect {
+  background: #fde8e8;
+  border-left: 4px solid #e74c3c;
+}
+
+.explanation {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: 8px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  #quiz-container {
+    padding: 20px;
+  }
+  
+  .question p {
+    font-size: 16px;
+  }
+  
+  label {
+    padding: 8px 12px;
+  }
+}
+
+/* 動畫效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.question {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* 進度指示器 (可選) */
+.progress-bar {
+  height: 5px;
+  background: #ecf0f1;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  background: #3498db;
+  border-radius: 5px;
+  transition: width 0.3s;
+}
