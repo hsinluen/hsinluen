@@ -1,7 +1,15 @@
 {
+  "metadata": {
+    "title": "遙控無人機專業操作證學科測驗題庫",
+    "version": "1.0",
+    "update_date": "2023-05-28",
+    "total_questions": 588
+  },
   "chapters": [
     {
+      "id": 1,
       "name": "民用航空法及相關法規",
+      "description": "第一章 民用航空法及相關法規",
       "questions": [
         {
           "id": 1,
